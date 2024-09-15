@@ -21,7 +21,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/health', HealthRoutes);
+app.use('/healthz', HealthRoutes);
 app.use('/api/bsky', BskyRoutes);
 
 const PORT = process.env.PORT || 3001;
